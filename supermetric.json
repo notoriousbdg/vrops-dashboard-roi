@@ -1,0 +1,458 @@
+{
+  "28733a23-f6bc-4eb8-85ed-4e8e85058023": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588713379103,
+    "name": "VMs Remaining (Average VM Size)",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=Datacenter, metric=OnlineCapacityAnalytics|capacityRemainingProfile, depth=10})",
+    "description": "",
+    "unitId": "",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "3aedeea9-c92c-4c8d-9b87-4a4498753236": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "CustomDatacenter",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "ClusterComputeResource",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "Datacenter",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588198505777,
+    "name": "Total Potential Savings",
+    "formula": "max([${this, metric=Super Metric|sm_843b35a1-36a6-45b2-b2ca-2002968d89a4},0]) + max([${this, metric=Super Metric|sm_fc817400-5e34-4785-8d94-60a54d04de42},0]) + max([${this, metric=Super Metric|sm_77696a4e-f20f-48ea-8b71-ffce3832a486},0]) + max([${this, metric=Super Metric|sm_9d345011-ac92-48f1-9984-80e167de0df8},0]) + max([${this, metric=Super Metric|sm_3cc4d662-692d-4885-934f-5b8760a561f8},0]) + max([${this, metric=Super Metric|sm_ff55995f-9a89-4a0f-a1ea-b04be95d3335},0])",
+    "description": "",
+    "unitId": "currencymonth",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "9eb1d16b-b645-41f5-8588-04bc6385838b": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "CustomDatacenter",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "ClusterComputeResource",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "Datacenter",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588676341525,
+    "name": "Total Server Purchase Cost",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=HostSystem, metric=cost|serverPurchaseCost, depth=10, where=\"cost|serverIsLeased equals false\"})",
+    "description": "",
+    "unitId": "currency",
+    "modifiedBy": "d7b2ad0a-330b-43b4-9e3d-a4d153ec4828"
+  },
+  "20f38eb6-7d3c-435f-8552-9c177cf2a5c6": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "CustomDatacenter",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "ClusterComputeResource",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "Datacenter",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1587656093141,
+    "name": "Total Server Accumulated Depreciation",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=HostSystem, metric=cost|accumulatedDepreciation, depth=10})",
+    "description": "",
+    "unitId": "currency",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "05e88f88-b618-43ac-abfa-c99513de251f": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588198071464,
+    "name": "​Total Cost of Ownership  with Potential Savings and Optimizations",
+    "formula": "${this, metric=cost|total_aggregated_cost} - max([${this, metric=Super Metric|sm_843b35a1-36a6-45b2-b2ca-2002968d89a4},0]) - max([${this, metric=Super Metric|sm_fc817400-5e34-4785-8d94-60a54d04de42},0]) - max([${this, metric=Super Metric|sm_77696a4e-f20f-48ea-8b71-ffce3832a486},0]) - max([${this, metric=Super Metric|sm_9d345011-ac92-48f1-9984-80e167de0df8},0]) - max([${this, metric=Super Metric|sm_3cc4d662-692d-4885-934f-5b8760a561f8},0]) - max([${this, metric=Super Metric|sm_ff55995f-9a89-4a0f-a1ea-b04be95d3335},0]) + max([${this, metric=Super Metric|sm_06488d0c-07b4-4680-99e9-a5f15259c9c2},0])",
+    "description": "",
+    "unitId": "currencymonth",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "6c249363-d801-4bbc-a2dc-5a3e2f1d0e32": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "CustomDatacenter",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "ClusterComputeResource",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "Datacenter",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588027146166,
+    "name": "Total Server Remaining Depreciation",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=HostSystem, metric=cost|serverPurchaseCost, depth=10, where=\"cost|serverIsLeased equals false\"}) - sum(${adaptertype=VMWARE, objecttype=HostSystem, metric=cost|accumulatedDepreciation, depth=10})",
+    "description": "",
+    "unitId": "currency",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "39c00349-30ab-42e4-993d-446122aca7ba": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "CustomDatacenter",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "ClusterComputeResource",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "Datacenter",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588053529626,
+    "name": "Number of Fully Depreciated Servers",
+    "formula": "count(${adaptertype=VMWARE, objecttype=HostSystem, metric=cost|hardwareTotalCost, depth=10, where=(${metric=cost|serverIsLeased} equals 'false' && ${metric=cost|hardwareTotalCost} == 0) })",
+    "description": "",
+    "unitId": "",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "b171c775-d58b-4bcc-ad97-943a683805f2": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "CustomDatacenter",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "ClusterComputeResource",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "Datacenter",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588049661497,
+    "name": "Cost Drivers - Server Hardware (Owned)",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=HostSystem, metric=cost|hardwareTotalCost, depth=10, where=\"cost|serverIsLeased equals false\"})",
+    "description": "",
+    "unitId": "currencymonth",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "8053e04e-6d6d-417c-8aac-bd146475e29d": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "CustomDatacenter",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "ClusterComputeResource",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "Datacenter",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588004201673,
+    "name": "Cost Drivers - VM Direct Costs",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=VirtualMachine, attribute=cost|directCost, depth=10})",
+    "description": "",
+    "unitId": "currencymonth",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "97a225ee-04f1-4e93-8bbd-ce2957802217": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "CustomDatacenter",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "ClusterComputeResource",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "Datacenter",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588003939229,
+    "name": "Cost Drivers - Server Labor",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=HostSystem, metric=cost|hostLaborTotalCost, depth=10})",
+    "description": "",
+    "unitId": "currencymonth",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "d5088d75-f373-45cd-8bb5-7ee584583ed7": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "CustomDatacenter",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "ClusterComputeResource",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "Datacenter",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588003771808,
+    "name": "Cost Drivers - Maintenance",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=HostSystem, metric=cost|maintenanceTotalCost, depth=10})",
+    "description": "",
+    "unitId": "currencymonth",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "b6fdef1f-79ca-4241-9017-1f782874bb72": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "CustomDatacenter",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "ClusterComputeResource",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "Datacenter",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588003687877,
+    "name": "Cost Drivers - Host OS License",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=HostSystem, metric=cost|hostOslTotalCost, depth=10})",
+    "description": "",
+    "unitId": "currencymonth",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "c2647428-60dc-49aa-9170-facff9525352": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "CustomDatacenter",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "ClusterComputeResource",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "Datacenter",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588004030853,
+    "name": "Cost Drivers - Network",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=HostSystem, metric=cost|networkTotalCost, depth=10})",
+    "description": "",
+    "unitId": "currencymonth",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "2294d544-d6a4-44d5-945f-e22a7346acf2": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "CustomDatacenter",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "ClusterComputeResource",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "Datacenter",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588003851193,
+    "name": "Cost Drivers - Facilities",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=HostSystem, metric=cost|facilitiesTotalCost, depth=10})",
+    "description": "",
+    "unitId": "currencymonth",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "0e0fc667-7ec1-4ecc-95c1-2eec0b1cff0d": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "CustomDatacenter",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "ClusterComputeResource",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "Datacenter",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588049755842,
+    "name": "Cost Drivers - Server Hardware (Leased)",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=HostSystem, metric=cost|hardwareTotalCost, depth=10, where=\"cost|serverIsLeased equals true\"})",
+    "description": "",
+    "unitId": "currencymonth",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "1ef542c6-1e76-4cda-b810-64a2b6046b19": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "CustomDatacenter",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "ClusterComputeResource",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "Datacenter",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588004107914,
+    "name": "Cost Drivers - Storage",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=Datastore, metric=cost|totalCost, depth=10})",
+    "description": "",
+    "unitId": "currencymonth",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "26b2538b-5047-4306-b7bd-78ae408d0b6a": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588727269228,
+    "name": "Cost of Compute Capacity Used",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=Datacenter, metric=cost|clusterUnallocatedCost, depth=2})",
+    "description": "",
+    "unitId": "currencymonth",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "2113522b-fb2f-4aea-98af-cef4f8fcda77": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "Storage Tier",
+        "adapterKindKey": "Container"
+      }
+    ],
+    "modificationTime": 1588727333008,
+    "name": "Cost of Storage Capacity Used",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=Datastore, metric=cost|effectiveAllocatedTotalCost, depth=10})",
+    "description": "",
+    "unitId": "currencymonth",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "effa008b-b6c9-42fd-81a6-e339c6f2975d": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      },
+      {
+        "resourceKindKey": "Storage Tier",
+        "adapterKindKey": "Container"
+      }
+    ],
+    "modificationTime": 1588727373436,
+    "name": "Cost of Storage Capacity Remaining",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=Datastore, metric=cost|effectiveUnallocatedTotalCost, depth=10})",
+    "description": "",
+    "unitId": "currencymonth",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "0d1ce4c6-bd08-41d9-ae58-e2cb30f3594f": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1588727297100,
+    "name": "Cost of Compute Capacity Remaining",
+    "formula": "sum(${adaptertype=VMWARE, objecttype=Datacenter, metric=cost|clusterAllocatedCost, depth=2})",
+    "description": "",
+    "unitId": "currencymonth",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  }
+}
