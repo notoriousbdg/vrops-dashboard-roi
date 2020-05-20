@@ -89,6 +89,7 @@ Use this [vRealize Operations](https://www.vmware.com/products/vrealize-operatio
 | Number of Fully Depreciated Servers | Custom Datacenter |
 | Number of Fully Depreciated Servers | Datacenter |
 | Number of Fully Depreciated Servers | Cluster Compute Resource |
+| Potential Savings and Optimization Opportunities | vSphere World |
 | Total Cost of Ownership with Potential Savings and Optimizations | vSphere World |
 | Total Potential Savings | vSphere World |
 | Total Potential Savings | Custom Datacenter |

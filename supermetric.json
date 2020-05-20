@@ -454,5 +454,19 @@
     "description": "",
     "unitId": "currencymonth",
     "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
+  },
+  "93b01209-d46c-46c4-af12-cc7037d3bc78": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "vSphere World",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1589570561147,
+    "name": "Potential Savings and Optimization Opportunities",
+    "formula": "floor(( 1 - ( ${this, metric=Super Metric|sm_05e88f88-b618-43ac-abfa-c99513de251f} / ${this, metric=cost|total_aggregated_cost} ) ) * 10000 + 0.5 ) / 100",
+    "description": "",
+    "unitId": "percent",
+    "modifiedBy": "6df558f7-25df-4222-96b9-ade784399d19"
   }
 }
