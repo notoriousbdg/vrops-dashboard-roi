@@ -1,5 +1,5 @@
 
-# ROI Dashboard for vRealize Operations 8.1
+# ROI Dashboard for vRealize Operations 8.1 and Cloud
 ---------
 
 Use this [vRealize Operations](https://www.vmware.com/products/vrealize-operations.html) to view total cost of ownership, potential savings, and optimization costs.  View cost breakdown by cost drivers, capacity used, and datacenter as well as tracking for server depreciation.  More details on using this dashboard is available in the [ROI Dashboard for vRealize Operations](https://blogs.vmware.com/management/2020/05/roi-dashboard-for-vrealize-operations-8-1.html) blog post.
@@ -111,7 +111,7 @@ Use this [vRealize Operations](https://www.vmware.com/products/vrealize-operatio
 
 ## Support
 
-This dashboard requires vRealize Operation 8.1 Advanced or Enterprise edition.
+This dashboard requires vRealize Operation 8.1 Advanced or Enterprise edition or vRealize Operations Cloud.
 
 Please open an [issue](https://github.com/notoriousbdg/vrops-dashboard-roi/issues) for feedback.
 
